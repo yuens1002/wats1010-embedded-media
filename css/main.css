@@ -63,7 +63,7 @@ a:hover {
 
 a:hover.social-icon {
     color: #FEB1BC;
-    background-color: white;
+    background-color: transparent;
     text-decoration: none;
 }
     
@@ -132,11 +132,16 @@ section, nav {
 footer {
     max-width: 640px;
     font-size: 90%;
-    text-align: center;
     margin: 0 auto;
     width: 80%;
     padding-bottom: 2em;
     
+}
+
+.footer-list li {
+    display: inline;
+    margin-right: 0.5em;
+    padding-right: 0.5em;
 }
 
 .film-title {
@@ -175,11 +180,10 @@ footer {
 	display: inline-block;
     }
 
-#about p, #social-link p {
+#about p, #story p {
     margin: 1em 0;
 }
-
-
+    
 #social-links {
     width: 35%;
     float: right;
