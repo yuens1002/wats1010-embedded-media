@@ -10,63 +10,122 @@
         <!-- TODO: Make a favicon that better represents the page. -->
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="stylesheet" href="css/main.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Amatic+SC|Comfortaa' rel='stylesheet' type='text/css'>
+        
+        <!-- flash fall back player -->
+        <!-- 1. skin -->
+        <link rel="stylesheet" href="//releases.flowplayer.org/6.0.3/skin/functional.css">
+ 
+        <!-- 2. jquery library - required for video tag based installs -->
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+ 
+        <!-- 3. flowplayer & tabs -->
+        <script src="//releases.flowplayer.org/6.0.3/flowplayer.min.js"></script>
+        
+        <!-- links to script in js folder for tab function -->
+        <script src="js/tab.js"></script>
+        
+        
+        
     </head>
 
     <body>
-
-        <header>
-            <!-- TODO: Create an elegant header using either one of the images
-                 or the video loop included in this repository. Make sure the
-                 page navigation is presented clearly and in a user-friendly
-                 way. Also, be sure to choose the proper image format as you
-                 insert backgrounds and other images into the page. Balance
-                 image quality with file size to achieve the best user
-                 experience. -->
-            <h1>Monkaa</h1>
-            <p class="subtitle">An open source short film</p>
-            <nav>
-                <ul class="main-nav">
-                    <li><a href="#watch">Watch</a></li>
-                    <li><a href="#listen">Listen</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
+        <div class="wrapper">
+            <header><img src="img/monkey_flight.jpg"></header>
+            <nav class="film-title">
+                    <li><h1>Monkaa</h1></li>
+                <li><h3>- <a href="#watch">Watch</a></h3></li>
+                <li><h3>- <a href="#listen">Listen</a></h3></li>
+                <li><h3>- <a href="#about">About</a></h3></li>
+                
             </nav>
-        </header>
-
-        <aside id="social">
-            <!-- TODO: Experiment with different ways of making this set of
+            
+            <!--
+            <h1>Monkaa - Story</h1><small>An Open Source Short Film</small>
+            <li>created by</li>
+            <li>social links</li>
+             
+            <div>Monkaa An open source short film<div>
+            <div>created by</div>
+                <div> Twitter Facebook Instagram</div>
+           
+                <ul>
+                    <li class="twitter"><a href="http://twitter.com">Twitter</a></li>
+                    <li class="facebook"><a href="http://facebook.com">Facebook</a></li>
+                    <li class="instagram"><a href="http://instagram.com">Instagram</a></li>
+                </ul>  
+                    -->
+        
+        
+       <!-- <aside id="social">
+             TODO: Experiment with different ways of making this set of
                  share links stand out and stay near the user all the time.
                  Try using 'absolute', 'fixed', or even 'sticky' positioning
                  to achieve a user-friendly effect. You may also use the
                  `:hover` pseudoselector to trigger height or width changes
                  that could help you make a more interactive design. -->
-            <h2>Share</h2>
+           <!-- <h2>Share</h2>
             <ul class="social-links">
                 <li class="twitter"><a href="http://twitter.com">Twitter</a></li>
                 <li class="facebook"><a href="http://facebook.com">Facebook</a></li>
                 <li class="instagram"><a href="http://instagram.com">Instagram</a></li>
             </ul>
         </aside>
+             -->   
+    
+        <!-- 
+        <aside id="social">
+            TODO: Experiment with different ways of making this set of
+                 share links stand out and stay near the user all the time.
+                 Try using 'absolute', 'fixed', or even 'sticky' positioning
+                 to achieve a user-friendly effect. You may also use the
+                 `:hover` pseudoselector to trigger height or width changes
+                 that could help you make a more interactive design.
+            <h2>Share</h2>
+            <ul class="social-links">
+                <li class="twitter"><a href="http://twitter.com">Twitter</a></li>
+                <li class="facebook"><a href="http://facebook.com">Facebook</a></li>
+                <li class="instagram"><a href="http://instagram.com">Instagram</a></li>
+            </ul>
+        </aside>-->
+        
+        <section id="story">
+            <aside id="social-links">
+               by <img src="http://www.weybec.com/weybe/wp-content/uploads/2015/01/Custom-logo.png" width="40%"><br><br>
+                <h3>share with a friend</h3>
+                <ul>
+                    <li><a class="social-icon" href="http://twitter.com"><i class="fa fa-twitter-square"></i></a></li>
+            <li><a class="social-icon" href="http://facebook.com"><i class="fa fa-facebook-square"></i></a></li>
+            <li><a class="social-icon" href="http://instagram.com"><i class="fa fa-instagram"></i></a></li>
+                </ul> 
+            </aside>
+            <p><small>An open Source Short Film</small><br>Monkaa is a blue furred, pink faced monkey who consumes a crystallized meteorite, which makes Monkaa invincibly strong and too hot to handle. Fnd out more about Monkaa's superpower as he zooms into an unexplored universet - <a href="http://www.weybec.com/portfolio-item/monkaa/#sthash.6tggaKmq.dpuf">Weybec</a></p>
+        </section>
 
         <section id="watch">
             <h2>Watch</h2>
-            <!-- TODO: Embed the .webm and .mp4 video with full controls for a
-                 convenient and attractive video viewing experience. -->
+            
+            <video controls class="flowplayer">
+                <source src="media/video/monkaa_1080p.webm" type="video/mp4">
+                <source src="media/video/monkaa_1080p.webm" type="video/webm; codecs=vp8,vorbis">
+            </video>
 
             <!-- TODO: Style an elegant download link to download the video. -->
             <h3>Download the video</h3>
             <p>
                 Click below to download either MP4 or WEBM versions of this video.
-                <br>
-                <a class="download-button" href="media/video/monkaa_1080p.mp4">.MP4 Version</a>
-                <a class="download-button" href="media/video/monkaa_1080p.webm">.WEBM Version</a>
+                <br><i class="fa fa-download"></i>
+                <a class="download-button" href="media/video/monkaa_1080p.mp4">MP4 Version</a> <i class="fa fa-download"></i>
+                <a class="download-button" href="media/video/monkaa_1080p.webm">WEBM Version</a>
             </p>
         </section>
 
         <section id="listen">
             <h2>Listen</h2>
-            <!-- TODO: Embed an audio player so users can play back the
-                 soundtrack MP3 directly on the page. -->
+            <audio controls>
+                <source src="media/audio/monkaa_soundtrack.mp3" type="video/mp4">
+            <audio>
 
             <!-- TODO: Style an elegant download link to download the video. -->
             <p>
@@ -75,47 +134,28 @@
         </section>
 
         <section id="about">
+            <h2>About</h2>
             <!-- TODO: Style this text so it is comfortable to read and nice
                  to look at. Style the "lead" paragraph to be more eye-catching
                  so that text stands out. -->
-            <h2>About</h2>
-            <p class="lead">Monkaa is a blue-furred, pink-faced monkey who consumes a crystallized meteorite, making him invincibly strong and too hot to handle. Exploring his new superpowers, Monkaa zooms through an entire universe. </p>
-
-            <ul class="weybec-people">
-                <!-- TODO: You must choose the proper image format to use for
-                     each headshot below. Images are located in the
-                     ``img/weybec/`` directory. -->
-                <li>
-                    <img class="headshot" src="TODO" alt="Pratik Solanki headshot"><br>
-                    Pratik Solanki<br>
-                    Co-Founder
-                </li>
-                <li>
-                    <img class="headshot" src="TODO" alt="Nita Ravalji headshot"><br>
-                    Nita Ravalji<br>
-                    Co-Founder
-                </li>
-                <li>
-                    <img class="headshot" src="TODO" alt="Niyal Parmar headshot"><br>
-                    Niyal Parmar<br>
-                    Co-Founder
-                </li>
-            </ul>
-
-            <p>Monkaa is produced by <a href="http://www.weybec.com/">Weybec</a>, an animation studio located in Mumbai, India and founded by Pratik Solanki, Nita Ravalji and Niyal Parmar.</p>
+             <p>Monkaa is produced by <a href="http://www.weybec.com/">Weybec</a>, an animation studio located in Mumbai, India and founded by Pratik Solanki, Nita Ravalji and Niyal Parmar.</p>
 
             <p>Project Monkaa is a 5-minute short animated movie, entirely made with Blender and GIMP and other Free/Open Software programs. It has been released as an Open Movie, with all production files and tutorials available on <a href="https://cloud.blender.org/open-movie/monkaa/">Blender Cloud</a> under a CC-BY license, as well as on a DVD available in the <a href="http://www.blender3d.org/e-shop/">Blender Store</a>.</p>
+            <h3>Weybec Founders</h3>
+            <div id="gallery">
+                <div><img src="img/weybec/pratik_solanki.jpg" alt="Pratik Solanki headshot"><br>Pratik Solanki<br>Co-Founder
+                </div>
+                <div><img src="img/weybec/Nita-ravalji1.jpg" alt="Nita Ravalji headshot"><br>Nita Ravalji<br>Co-Founder
+                </div>
+                <div><img src="img/weybec/niyal_parmar.jpg" alt="Niyal Parmar headshot"><br>Niyal Parmar<br>Co-Founder
+                </div>
+            </div>
         </section>
-
+    </div>
         <footer><!-- TODO: Style the footer appropriately. -->
-            <p>This page was created and designed by WEBDEV BEV in 2015. <i>Monkaa</i> was created by <a href="http://www.weybec.com/">Weybec</a> and is used here under a CC-BY license.</p>
-            <nav>
-                <ul class="main-nav">
-                    <li><a href="#watch">Watch</a></li>
-                    <li><a href="#listen">Listen</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </nav>
+            <p>Monkaa - Story - Watch - Listen - About  |  
+            This Page is designed by Sunny Yuen, SU WATS1010 2015. <i>Monkaa</i> was created by <a href="http://www.weybec.com/">Weybec</a> and is used here under a CC-BY license.</p>
+      
         </footer>
 
     </body>
